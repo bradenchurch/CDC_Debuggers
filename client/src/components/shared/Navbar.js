@@ -37,13 +37,6 @@ class Navbar extends Component {
               active={location.pathname === '/register'}
             />
           </Link>
-          <Link to='/inspector'>
-            <Menu.Item
-              id='inspector'
-              name='inspector'
-              active={location.pathname === '/inspector'}
-            />
-          </Link>
         </Menu.Menu>
       )
     }
