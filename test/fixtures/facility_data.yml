@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patients: 
+  covid_cases: 
+  date: 2020-07-11 10:21:43
+  user: one
+
+two:
+  patients: 
+  covid_cases: 
+  date: 2020-07-11 10:21:43
+  user: two
