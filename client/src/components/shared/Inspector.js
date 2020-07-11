@@ -2,8 +2,8 @@ import React from 'react';
 import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Button, Form, Segment, Header, } from 'semantic-ui-react';
 
-class Login extends React.Component {
-  state = { email: '', password: '' }
+class InspectorForm extends React.Component {
+  state = { reviewer: '', passing_grade: '' , inspector_report: ''}
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +12,7 @@ class Login extends React.Component {
   }
 
   handleChange = (e) => {
-    const { name, value, } = e.target;
+    const { name, value } = e.target;
     this.setState({ [name]: value, });
   }
   
@@ -20,42 +20,33 @@ class Login extends React.Component {
     const { reviewer, passing_grade, inspector_report } = this.state;
     return (
       <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+        <Header as='h1' textAlign='center'>Inspector Review</Header>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Input
-            label="Inspector"
-            autoFocus
-            required         
-            name= 'inspector'
-            value={inspector}
-            placeholder='inspector'
-            onChange={this.handleChange}
-          />
           <Form.Input
             label="Reviewer"
             required
-            name='reviewer
+            name='reviewer'
             value={reviewer}
             placeholder='Reviewer'
             type='reviewer'
             onChange={this.handleChange}
           />
            <Form.Input
-            label="Passing_Grade"
+            label="passing grade"
             required
-            name='Passing Grade'
-            value={password}
-            placeholder='Passing Grade'
-            type='Passing Grade'
+            name='passing_grade'
+            value={passing_grade}
+            placeholder='PassingGrade'
+            type='passinggrade'
             onChange={this.handleChange}
           />
             <Form.Input
-            label="Inspector_Report"
+            label="Inspector Report"
             required
-            name='Inspector Report'
-            value={inspector report)
+            name='Inspector_Report'
+            value={inspector_report}
             placeholder='Inspector Report'
-            type='Inspector Report'
+            type='inspector_report'
             onChange={this.handleChange}
            />
           <Segment textAlign='center' basic>
@@ -66,24 +57,19 @@ class Login extends React.Component {
     )
   }
 }
-export default class ConnectedLogin extends React.Component {
-  render() {
-    return (
-      <AuthConsumer>
-        { auth => <Login {...this.props} auth={auth} />}
-      </AuthConsumer>
-    )
-  }
-}
-});
+;
+
+  export default InspectorForm;
+
+// export default class ConnectedLogin extends React.Component {
+//   render() {
+//     return (
+//       <AuthConsumer>
+//         { auth => <Login {...this.props} auth={auth} />}
+//       </AuthConsumer>
+//     )
+//   }
+// }
+// ;
 
 
-
-const Home = () => (
-  <>
-  <h1>CDC Guidline Compliance</h1>
-  <h2>Nursing Home Safety</h2>
-    <Hero>
-    </Hero>
-  </>
-);

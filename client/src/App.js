@@ -6,7 +6,7 @@ import Register from './components/auth/Register';
 import Navbar from './components/shared/Navbar';
 import NoMatch from './components/shared/NoMatch';
 import FetchUser from './components/auth/FetchUser';
-import Home from './components/home/Home';
+import Inspector from './components/shared/Inspector';
 
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
@@ -24,6 +24,7 @@ const App = () => (
         {/* <ProtectedRoute exact path='/dash' component={Dash} /> */}
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
+        <Route exact path='/inspector' component={Inspector} />
         <Route component={NoMatch} />
       </Switch>
     </FetchUser>
