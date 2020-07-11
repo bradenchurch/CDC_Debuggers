@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 // import Home from './components/home/Home';
-import Login from './auth/Login';
-import Register from './auth/Register';
-import Navbar from './shared/Navbar';
-// import NoMatch from './components/shared/NoMatch';
-import FetchUser from './auth/FetchUser';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import Navbar from './components/shared/Navbar';
+import NoMatch from './components/shared/NoMatch';
+import FetchUser from './components/auth/FetchUser';
 
-import ProtectedRoute from './auth/ProtectedRoute';
+import ProtectedRoute from './components/auth/ProtectedRoute';
 
 
 

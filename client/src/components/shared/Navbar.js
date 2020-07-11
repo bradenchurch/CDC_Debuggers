@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import { AuthConsumer, } from "../providers/AuthProvider";
+import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Menu, } from 'semantic-ui-react'
 import { Link, withRouter, } from 'react-router-dom'
 
 
 class Navbar extends Component {
 
-componentDidMount() {
-  console.log(this.props)
-}
 
   rightNavItems = () => {
     const { auth: { user, handleLogout, }, location, } = this.props;
