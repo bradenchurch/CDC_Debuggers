@@ -6,9 +6,10 @@ import Register from './components/auth/Register';
 import Navbar from './components/shared/Navbar';
 import NoMatch from './components/shared/NoMatch';
 import FetchUser from './components/auth/FetchUser';
-import Inspector from './components/shared/Inspector';
-
+import FacilityData from './components/facility/FacilityData';
+import Inspector from './components/inspector/Inspector';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+
 
 
 
@@ -19,8 +20,8 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         {/* <Route exact path='/Feed' component={Feed} /> */}
-        {/* <ProtectedRoute exact path='/profile' component={Profile} /> */}
-        {/* <ProtectedRoute exact path='/collection' component={Collection} /> */}
+        <ProtectedRoute exact path='/facility' component={FacilityData} />
+        <ProtectedRoute exact path='/inspector' component={Inspector} />
         {/* <ProtectedRoute exact path='/dash' component={Dash} /> */}
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />

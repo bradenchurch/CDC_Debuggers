@@ -8,19 +8,19 @@ User.create(email: "johnston@gmail.com", first_name: "johnston",last_name: "pip"
 #Facility Data
 
 3.times do
-  Facility_data.create(user_id: (rand(6)+1), patients: rand(6)+1, covid_cases: rand(6)+1))
+  Facility_data.create(user_id: (rand(6)+1), patients: (rand(6)+1), covid_cases: (rand(6)+1))
 end
 
 #Facility Inspection
 
 3.times do
-  Facility_inspection.create(facility_data_id: (rand(6)+1), reviewer: Faker::TvShows::RickAndMorty.character, passing_grade: (rand(6)+1), inspector_report: (rand(6)+1) ))
+  Facility_inspection.create(facility_data_id: (rand(6)+1), reviewer: Faker::TvShows::RickAndMorty.character, passing_grade: (rand(6)+1), inspector_report: (rand(6)+1))
 end
 
 #CDC Guidelines
 
 3.times do
-  Guidelines.create(user_id: (rand(6)+1), masks: 'Y', inspections: "Y", date: )
+  Guidelines.create(user_id: (rand(6)+1), masks: 'T', inspections: 'F', date: Date.current)
 end
 
 

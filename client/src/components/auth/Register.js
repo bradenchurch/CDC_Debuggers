@@ -3,7 +3,7 @@ import { AuthConsumer, } from "../../providers/AuthProvider";
 import { Button, Form, Segment, Header, } from 'semantic-ui-react';
 
 class Register extends React.Component {
-  state = { email: '', password: '', passwordConfirmation: '', first_name: '', last_name: '' };
+  state = { email: '', password: '', passwordConfirmation: '', first_name: '', last_name: '', title: '' };
   handleSubmit = (e) => {
     e.preventDefault();
     const { email, password, passwordConfirmation } = this.state;
@@ -18,7 +18,7 @@ class Register extends React.Component {
     this.setState({ [name]: value, });
   }
   render() {
-    const { first_name, last_name, email, password, passwordConfirmation, } = this.state;
+    const { first_name, last_name, title, email, password, passwordConfirmation, } = this.state;
     return (
       <Segment basic>
         <Header as='h1' textAlign='center'>Register</Header>
@@ -39,6 +39,15 @@ class Register extends React.Component {
             name='last_name'
             value={last_name}
             placeholder='Last Name'
+            onChange={this.handleChange}
+          />
+          <Form.Input
+            label="Title"
+            required
+            autoFocus
+            name='title'
+            value={title}
+            placeholder='Title'
             onChange={this.handleChange}
           />
           <Form.Input
