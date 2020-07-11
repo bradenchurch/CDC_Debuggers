@@ -6,6 +6,7 @@ import Navbar from './shared/Navbar';
 function App() {
   return(
 <>
+
 <Switch>
   <Route exact path='/' component={Home} />
 </Switch>
