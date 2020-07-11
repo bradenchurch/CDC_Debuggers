@@ -25,7 +25,6 @@ const App = () => (
         {/* <ProtectedRoute exact path='/dash' component={Dash} /> */}
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
-        <Route exact path='/inspector' component={Inspector} />
         <Route component={NoMatch} />
       </Switch>
     </FetchUser>
