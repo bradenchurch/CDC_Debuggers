@@ -41,12 +41,12 @@ class InspectorForm extends React.Component {
             onChange={this.handleChange}
           />
             <Form.Input
-            label="Inspector Report"
+            label="inspector report"
             required
-            name='Inspector_Report'
+            name='inspector_report'
             value={inspector_report}
-            placeholder='Inspector Report'
-            type='inspector_report'
+            placeholder='InspectorReport'
+            type='inspectorreport'
             onChange={this.handleChange}
            />
           <Segment textAlign='center' basic>
